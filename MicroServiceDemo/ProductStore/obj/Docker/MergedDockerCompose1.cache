@@ -1,0 +1,23 @@
+services:
+  catalog.api:
+    build:
+      context: C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
+    depends_on:
+      ms-sql-1:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DefaultHost: ms-sql-1
+    image: catalogapi
+    ports:
+    - target: 80
+  ms-sql-1:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Pa55W0rd
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 1463
+      target: 1433
+version: '3.4'
