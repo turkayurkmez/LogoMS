@@ -1,0 +1,12 @@
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\bin\Debug\net6.0\Events.deps.json
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\bin\Debug\net6.0\Events.dll
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\bin\Debug\net6.0\Events.pdb
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.csproj.AssemblyReference.cache
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.AssemblyInfoInputs.cache
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.AssemblyInfo.cs
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.csproj.CoreCompileInputs.cache
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.dll
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\refint\Events.dll
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\Events.pdb
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\EventBus\Events\obj\Debug\net6.0\ref\Events.dll

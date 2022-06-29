@@ -10,6 +10,7 @@ COPY ["src/Services/Catalog/Catalog.API/Catalog.API.csproj", "src/Services/Catal
 COPY ["src/Services/Catalog/Catalog.Business/Catalog.Business.csproj", "src/Services/Catalog/Catalog.Business/"]
 COPY ["src/Services/Catalog/Catalog.DataAccess/Catalog.DataAccess.csproj", "src/Services/Catalog/Catalog.DataAccess/"]
 COPY ["src/Services/Catalog/Catalog.Entities/Catalog.Entities.csproj", "src/Services/Catalog/Catalog.Entities/"]
+COPY ["src/EventBus/Events/Events.csproj", "src/EventBus/Events/"]
 RUN dotnet restore "src/Services/Catalog/Catalog.API/Catalog.API.csproj"
 COPY . .
 WORKDIR "/src/src/Services/Catalog/Catalog.API"

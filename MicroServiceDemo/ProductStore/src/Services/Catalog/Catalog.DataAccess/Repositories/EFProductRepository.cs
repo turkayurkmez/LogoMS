@@ -1,5 +1,6 @@
 ﻿using Catalog.DataAccess.Data;
 using Catalog.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Catalog.DataAccess.Repositories
 
         public Product Get(int id)
         {
-            return catalogDbContext.Products.FirstOrDefault(p => p.Id == id);
+            return catalogDbContext.Products.AsNoTracking().FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetAll()
@@ -27,9 +28,20 @@ namespace Catalog.DataAccess.Repositories
             return catalogDbContext.Products.ToList();
         }
 
+        public bool IsExists(int id)
+        {
+            return catalogDbContext.Products.Any(x => x.Id == id);
+        }
+
         public IEnumerable<Product> Search(string name)
         {
             throw new NotImplementedException();
+        }
+
+        public void Update(Product entity)
+        {
+            catalogDbContext.Products.Update(entity);
+            catalogDbContext.SaveChanges();
         }
     }
 }

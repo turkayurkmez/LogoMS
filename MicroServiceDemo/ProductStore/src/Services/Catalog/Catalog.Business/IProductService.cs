@@ -1,4 +1,6 @@
-﻿using Catalog.Business.DTOs.Responses;
+﻿using Catalog.Business.DTOs.Requests;
+using Catalog.Business.DTOs.Responses;
+using Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +13,9 @@ namespace Catalog.Business
     {
         ProductResponse GetProductById(int id);
         IEnumerable<ProductResponse> GetProducts();
+
+        bool IsExists(int id);
+
+        ProductPriceChanged Update(UpdateProductRequest request);
     }
 }

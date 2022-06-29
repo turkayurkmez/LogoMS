@@ -10,6 +10,9 @@ namespace Catalog.DataAccess.Repositories
     public interface IRepository<T> where T: IEntity
     {
         T Get(int id);
-        IEnumerable<T> GetAll();    
+        IEnumerable<T> GetAll();
+
+        bool IsExists(int id);
+        void Update(T entity);
     }
 }

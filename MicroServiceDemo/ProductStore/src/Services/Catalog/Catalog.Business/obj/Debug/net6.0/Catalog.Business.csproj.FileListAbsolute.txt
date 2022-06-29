@@ -15,3 +15,5 @@ C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\Product
 C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\Services\Catalog\Catalog.Business\obj\Debug\net6.0\refint\Catalog.Business.dll
 C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\Services\Catalog\Catalog.Business\obj\Debug\net6.0\Catalog.Business.pdb
 C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\Services\Catalog\Catalog.Business\obj\Debug\net6.0\ref\Catalog.Business.dll
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\Services\catalog\Catalog.Business\bin\Debug\net6.0\Events.dll
+C:\Users\turka\source\repos\Kurumsal\Logo\MicroServices\MicroServiceDemo\ProductStore\src\Services\catalog\Catalog.Business\bin\Debug\net6.0\Events.pdb

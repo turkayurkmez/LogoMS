@@ -1,5 +1,8 @@
-﻿using Catalog.Business.DTOs.Responses;
+﻿using Catalog.Business.DTOs.Requests;
+using Catalog.Business.DTOs.Responses;
 using Catalog.DataAccess.Repositories;
+using Catalog.Entities;
+using Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +33,27 @@ namespace Catalog.Business
             return products.Select(x => new ProductResponse { CategoryId = x.CategoryId, Description = x.Description, Price = x.Price, Id = x.Id, Name = x.Name, ImageUrl = x.ImageUrl });
 
 
+        }
+
+        public bool IsExists(int id)
+        {
+            return repository.IsExists(id);
+        }
+
+        public ProductPriceChanged Update(UpdateProductRequest request)
+        {
+            ProductPriceChanged priceChangedEvent = null;
+            var existing = repository.Get(request.Id);
+
+            if (existing.Price != request.Price)
+            {
+                priceChangedEvent = new ProductPriceChanged(request.Id, existing.Price, request.Price);
+            }
+
+            var product = new Product { Id = request.Id, Price = request.Price, CategoryId = request.CategoryId, Description = request.Description, Name = request.Name, ImageUrl = request.ImageUrl };
+
+            repository.Update(product);
+            return priceChangedEvent;
         }
     }
 }

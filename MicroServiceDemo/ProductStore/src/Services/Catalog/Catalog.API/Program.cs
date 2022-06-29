@@ -1,6 +1,7 @@
 using Catalog.Business;
 using Catalog.DataAccess.Data;
 using Catalog.DataAccess.Repositories;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -21,6 +22,19 @@ var connectionString = builder.Configuration.GetConnectionString("db");
 connectionString = connectionString.Replace("[HOST]", defaultHost);
 builder.Services.AddDbContext<CatalogDbContext>(opt => opt.UseSqlServer(connectionString, b => b.MigrationsAssembly("Catalog.DataAccess")));
 
+var rabbitMq = builder.Configuration.GetValue<string>("RabbitMQ");
+
+builder.Services.AddMassTransit(configure =>
+{
+    configure.UsingRabbitMq((context, configurator) =>
+    {
+        configurator.Host(rabbitMq, "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+    });
+});
 
 var app = builder.Build();
 

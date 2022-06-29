@@ -622,6 +622,16 @@
         "runtime": {
           "bin/placeholder/Catalog.Entities.dll": {}
         }
+      },
+      "Events/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Events.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Events.dll": {}
+        }
       }
     }
   },
@@ -1797,11 +1807,17 @@
       "type": "project",
       "path": "../Catalog.Entities/Catalog.Entities.csproj",
       "msbuildProject": "../Catalog.Entities/Catalog.Entities.csproj"
+    },
+    "Events/1.0.0": {
+      "type": "project",
+      "path": "../../../EventBus/Events/Events.csproj",
+      "msbuildProject": "../../../EventBus/Events/Events.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Catalog.DataAccess >= 1.0.0"
+      "Catalog.DataAccess >= 1.0.0",
+      "Events >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1831,6 +1847,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\turka\\source\\repos\\Kurumsal\\Logo\\MicroServices\\MicroServiceDemo\\ProductStore\\src\\EventBus\\Events\\Events.csproj": {
+              "projectPath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\Logo\\MicroServices\\MicroServiceDemo\\ProductStore\\src\\EventBus\\Events\\Events.csproj"
+            },
             "C:\\Users\\turka\\source\\repos\\Kurumsal\\Logo\\MicroServices\\MicroServiceDemo\\ProductStore\\src\\Services\\Catalog\\Catalog.DataAccess\\Catalog.DataAccess.csproj": {
               "projectPath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\Logo\\MicroServices\\MicroServiceDemo\\ProductStore\\src\\Services\\Catalog\\Catalog.DataAccess\\Catalog.DataAccess.csproj"
             }
