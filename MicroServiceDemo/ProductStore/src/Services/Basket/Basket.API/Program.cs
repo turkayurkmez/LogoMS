@@ -1,4 +1,4 @@
-using Basket.API;
+﻿using Basket.API;
 using Basket.API.Consumers;
 using Basket.API.Services;
 using MassTransit;
@@ -16,6 +16,7 @@ builder.Services.AddHttpClient<ICatalogService, CatalogService>();
 builder.Services.AddSingleton<BasketRepository>();
 
 var rabbitMq = builder.Configuration.GetValue<string>("RabbitMQ");
+Console.WriteLine($"..............DİKKAT RabbitMQ bağlantısı:{rabbitMq}");
 
 builder.Services.AddMassTransit(configure =>
 {

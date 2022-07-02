@@ -38,9 +38,9 @@ services:
      ports:
       - "8082:80" 
      environment:
-      CatalogAPI: "http://catalog.api:80/"
-      RabbitMQ: "rabbitmq"
-      ASPNETCORE_ENVIRONMENT: Development
+       CatalogAPI: "http://catalog.api:80/"
+       RabbitMQ: "rabbitmq"
+       ASPNETCORE_ENVIRONMENT: Development
      depends_on:
        - rabbitmq
        - catalog.api

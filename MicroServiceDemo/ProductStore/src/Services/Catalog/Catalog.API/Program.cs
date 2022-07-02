@@ -1,4 +1,4 @@
-using Catalog.Business;
+﻿using Catalog.Business;
 using Catalog.DataAccess.Data;
 using Catalog.DataAccess.Repositories;
 using MassTransit;
@@ -23,6 +23,7 @@ connectionString = connectionString.Replace("[HOST]", defaultHost);
 builder.Services.AddDbContext<CatalogDbContext>(opt => opt.UseSqlServer(connectionString, b => b.MigrationsAssembly("Catalog.DataAccess")));
 
 var rabbitMq = builder.Configuration.GetValue<string>("RabbitMQ");
+Console.WriteLine($"..............DİKKAT RabbitMQ bağlantısı:{rabbitMq}");
 
 builder.Services.AddMassTransit(configure =>
 {

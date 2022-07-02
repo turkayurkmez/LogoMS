@@ -1,0 +1,15 @@
+﻿
+Koreografi:
+
+1. Orders.API'ye bir sipariş gelir (POST)
+2. Db'ye Pending durumunda tutar ve OrderCreated olayını fırlatır.
+3. Stocks.API OrderCreated event'ine abonedir ve tetiklendiğinde, stok denetimi yapar.
+4. Yeterli stok varsa StockReserved olayını fırlatır.
+5. Payment.API StockReserved olayına abonedir ve ödeme alır.
+6. Ödeme başarılı ise PaymentCompleted olayını fırlatır. 
+7. Orders.API PaymentCompleted olayına abonedir ve pending olan kaydı success olarak günceller
+8. Stocks.API'de yeterli stok olmadığında StockNotReserved tetiklenir
+9. Orders.API StockNotReserved olayına abonedir ve Failed olarak sipariş durumunu günceller.
+10. Payment.API'de ödeme başarısız olursa PaymentFailed fırlar.
+11. Stocks.API PaymentFailed'a abonedir ve Stock'ları geri iade eder.
+12. Orders.API PaymentFailed'a abonedir ve  Failed olarak sipariş durumunu günceller.
